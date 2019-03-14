@@ -24,10 +24,11 @@ public class TaskList {
 
         LocalDate dueDate = Validator.validateDate();
 
-        System.out.println("Enter status");
-        String status = scanner.next();
+        System.out.println("Is task done? true/false");
+        boolean isDone = scanner.nextBoolean();
+        //handle incorrect boolean value here..
 
-        Task T = new Task(title, projectName, dueDate, status);
+        Task T = new Task(title, projectName, dueDate, isDone);
 
         taskList.add(T);
         System.out.println("Task has been added successfully");
@@ -45,10 +46,10 @@ public class TaskList {
         //option 2:
         // ask user to enter the new title, and the new project and the new date
         System.out.println("Enter new title:");
-        String title = scanner.nextLine();
+        String title = scanner.next();
         //  This is for edit title
         taskList.get(item).setTitle(title);
-
+        System.out.println("Task has been updated successfully");
     }
 
 
@@ -71,13 +72,14 @@ public class TaskList {
         while (it.hasNext()) {
             System.out.println("(" + index++ + ") " + it.next());
         }
-        System.out.println("Choose which taskList status yoy need to update:");
+        System.out.println("Choose which taskList status you need to update:");
         int item = scanner.nextInt();
         //  This is for edit title
-        System.out.println("Enter updated status:");
-        String Status = scanner.nextLine();
+        System.out.println("Is task done? true/false");
+        boolean isDone = scanner.nextBoolean();
         //  This is for edit title
-        taskList.get(item).setStatus(Status);
+        taskList.get(item).setDone(isDone);
+        System.out.println("Task status has been updated successfully");
 
     }
     public void saveTask() {
@@ -143,12 +145,11 @@ public class TaskList {
     public void showStatus(){
         int done=0,undone=0;
         for(Task task:taskList){
-            if(task.getStatus().equals("done")){
+            if(task.isDone()){
                 done++;
             }
-            else if (task.getStatus().equals("undone")){
+            else if (!task.isDone()){
                 undone++;
-
             }
 
         }

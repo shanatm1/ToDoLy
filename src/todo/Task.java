@@ -11,15 +11,15 @@ import java.time.LocalDate;
     private String title;
     private String projectName;
     private LocalDate dueDate;
-    private String status;
+    private boolean isDone;
 
 
-    public Task(String title, String projectName, LocalDate dueDate, String status) {
+    public Task(String title, String projectName, LocalDate dueDate, boolean isDone) {
         this.id = id;
         this.title = title;
         this.projectName = projectName;
         this.dueDate = dueDate;
-        this.status = status;
+        this.isDone = isDone;
     }
 
 
@@ -48,12 +48,12 @@ import java.time.LocalDate;
         this.dueDate = dueDate;
     }
 
-    public String getStatus() {
-        return status;
+    public boolean isDone() {
+        return isDone;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDone(boolean done) {
+        isDone = done;
     }
 
     public int getId() {
@@ -65,7 +65,7 @@ import java.time.LocalDate;
         return "" +
                 " title\t:\t'" + title + '\'' +
                 ", dueDate\t:'" + dueDate + '\'' +
-                ", taskStatus\t:" + status +
+                ", taskStatus\t:" + (isDone ? "done" : "undone") +
                 ", project\t:'" + projectName + '\''
                 ;
     }
