@@ -14,21 +14,27 @@ public class Application {
         selection.readTask();
 
         while (userOpt != 9) {
-            System.out.println("    Welcome User");
-            System.out.println("---------------------");
+            System.out.println("********************");
+            System.out.println(">>> Welcome User <<<");
+            System.out.println("********************");
+
             //System.out.println("You have X to do and y task are done");
+            System.out.println("=========================================");
             selection.showStatus();
+            System.out.println("=========================================");
+            System.out.println();
 
-            System.out.println("1. Add new todo.Task");
-            System.out.println("2. Display Tasks sort by date");
-            System.out.println("3. Display Task sort by project");
-            System.out.println("4. update Task ");
-            System.out.println("5. Remove Task");
-            System.out.println("6. update status");
-            System.out.println("7. Save ");
-            System.out.println("8. Exit ");
+            System.out.println("-->  1. Add new todo.Task");
+            System.out.println("-->  2. Display Tasks sort by date");
+            System.out.println("-->  3. Display Task sort by project");
+            System.out.println("-->  4. update Task ");
+            System.out.println("-->  5. Remove Task");
+            System.out.println("-->  6. update status");
+            System.out.println("-->  7. Save ");
+            System.out.println("-->  8. Exit ");
+            System.out.println("========================================");
 
-            System.out.print("Please select one of the options below: ");
+            System.out.print("Please select one of the options above: ");
             userOpt = input.nextInt();
             //System.out.println(line);
             //Scanner sc = new Scanner(System.in);

@@ -9,6 +9,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class TaskList {
+
     List<Task> taskList = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
@@ -41,13 +42,43 @@ public class TaskList {
         int item = scanner.nextInt();
 
         //option 1
-        System.out.println("choose what to update: 1-title, 2- project, 3- date");
-        //option 2:
-        // ask user to enter the new title, and the new project and the new date
-        System.out.println("Enter new title:");
-        String title = scanner.nextLine();
-        //  This is for edit title
-        taskList.get(item).setTitle(title);
+        System.out.println("choose what to update: 1--> Title, 2--> Project, 3--> Date");
+        int selection = scanner.nextInt();
+
+        switch (selection) {
+
+            case 1:
+
+
+            //option 2:
+            // ask user to enter the new title, and the new project and the new date
+
+
+            System.out.println("Enter new title:");
+            String title = scanner.next();
+            //  This is for edit title
+            taskList.get(item).setTitle(title);
+            System.out.println("Title has been edited");
+            break;
+
+            case 2:
+
+                System.out.println("Enter new project name:");
+                String projectName = scanner.next();
+                //  This is for edit title
+                taskList.get(item).setProjectName(projectName);
+                System.out.println("Project name has been edited");
+                break;
+
+            case 3:
+
+                LocalDate dueDate = Validator.validateDate();
+                taskList.get(item).setDueDate(dueDate);
+                System.out.println("Date has been edited");
+
+                break;
+
+        }
 
     }
 
@@ -75,9 +106,10 @@ public class TaskList {
         int item = scanner.nextInt();
         //  This is for edit title
         System.out.println("Enter updated status:");
-        String Status = scanner.nextLine();
+        String Status = scanner.next();
         //  This is for edit title
         taskList.get(item).setStatus(Status);
+        System.out.println("Status has been updated");
 
     }
     public void saveTask() {
