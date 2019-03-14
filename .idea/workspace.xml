@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b00a17ac-ca53-4987-b56b-c43a77854a6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/MainSelection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToDoLy/MainSelection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToDoLy/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/MainSelection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/TaskList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/Task.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +21,7 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ToDoLy$Application.ic" NAME="Application Coverage Results" MODIFIED="1551708741373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ToDoLy$Application.ic" NAME="Application Coverage Results" MODIFIED="1552567611411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ToDoLy$MainSelection.ic" NAME="MainSelection Coverage Results" MODIFIED="1551392261786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ToDoLy$TaskManager.ic" NAME="TaskManager Coverage Results" MODIFIED="1551386068344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -27,41 +29,46 @@
     <option name="myAddOrReplace" value="1" />
   </component>
   <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
     <option name="myElementSize" value="15" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Task.java">
+        <entry file="file://$PROJECT_DIR$/src/todo/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+            <state relative-caret-position="975">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
               <folding>
-                <element signature="e#165#166#0" expanded="true" />
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#256#257#0" expanded="true" />
-                <element signature="e#289#290#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#844#845#0" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#933#934#0" expanded="true" />
-                <element signature="e#877#878#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#930#931#0" expanded="true" />
+                <element signature="e#967#968#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1084#1085#0" expanded="true" />
+                <element signature="e#1117#1118#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#1252#1253#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MainSelection.java">
+        <entry file="file://$PROJECT_DIR$/src/todo/TaskList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="479">
+              <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,10 +77,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/todo/Validator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="-75">
+              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/todo/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-199">
+              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -87,6 +103,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>keyboard</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -94,21 +115,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Nour.java" />
-        <option value="$PROJECT_DIR$/src/TaskList.java" />
         <option value="$PROJECT_DIR$/src/IPtask.java" />
         <option value="$PROJECT_DIR$/src/TaskManger.java" />
         <option value="$PROJECT_DIR$/src/Task1.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/MainSelection.java" />
+        <option value="$PROJECT_DIR$/src/TaskList.java" />
         <option value="$PROJECT_DIR$/src/Task.java" />
+        <option value="$PROJECT_DIR$/src/App.java" />
+        <option value="$PROJECT_DIR$/src/TaskStore.java" />
+        <option value="$PROJECT_DIR$/src/todo/TaskStore.java" />
+        <option value="$PROJECT_DIR$/src/todo/Validator.java" />
+        <option value="$PROJECT_DIR$/src/todo/Application.java" />
+        <option value="$PROJECT_DIR$/src/todo/Task.java" />
+        <option value="$PROJECT_DIR$/src/todo/TaskList.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
-    <option name="y" value="25" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="831" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -127,6 +155,12 @@
               <item name="ToDoLy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ToDoLy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoLy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -136,7 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551777228951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552569609561" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -163,14 +197,14 @@
   </component>
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Application" />
+      <option name="MAIN_CLASS_NAME" value="todo.Application" />
       <module name="ToDoLy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainSelection" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainSelection" />
+    <configuration name="TaskList" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="todo.TaskList" />
       <module name="ToDoLy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,7 +212,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="Application.MainSelection" />
+      <item itemvalue="Application.TaskList" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -195,7 +229,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="25" width="1440" height="831" extended-state="0" />
+    <frame x="-5" y="23" width="1440" height="829" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -203,15 +237,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.22246066" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.14377682" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.3112314" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.31071913" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32746956" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32971507" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.48303935" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.33558863" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -220,7 +254,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.056509297" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.056509297" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
@@ -246,7 +280,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TaskList.java">
+    <entry file="file://$PROJECT_DIR$/src/todo/TaskList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
@@ -294,41 +328,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Task.java">
+    <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/todo/TaskStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainSelection.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/function/Function.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="153">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1117#1118#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/todo/TaskList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
