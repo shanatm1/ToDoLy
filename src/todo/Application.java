@@ -7,11 +7,10 @@ public class Application {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-        TaskList selection = new TaskList();
+        MainTask selection = new MainTask();
         Scanner input = new Scanner(System.in);
         int userOpt = 0;
 
-        selection.readTask();
 
         while (userOpt != 9) {
             System.out.println("********************");
@@ -47,7 +46,7 @@ public class Application {
             } else if (userOpt == 2) {
                 selection.displayByDate();
             } else if (userOpt == 3) {
-                selection.sortByProject();
+                selection.filterByProject();
             } else if (userOpt == 4) {
                 selection.updateTasks();
             } else if (userOpt == 5) {

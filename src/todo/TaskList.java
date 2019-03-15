@@ -8,25 +8,18 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class TaskList {
-
+public class TaskList
+{
     List<Task> taskList = new ArrayList<>();
-    private Scanner scanner = new Scanner(System.in).useDelimiter("\n");
+
+    public TaskList()
+    {
+        readTask();
+    }
 
     //TODO use stream to count the task that is done or undone
-    public void addTask() {
-
-        System.out.println();
-        System.out.println("The title of the taskList");
-        String title = scanner.next();
-
-        System.out.println("Enter your project Name");
-        String projectName = scanner.next();
-
-        LocalDate dueDate = Validator.validateDate();
-
-        System.out.println("Enter status");
-        String status = scanner.next();
+    public void addTask(String title, String projectName, LocalDate dueDate, String status)
+    {
 
         Task T = new Task(title, projectName, dueDate, status);
 
@@ -35,84 +28,58 @@ public class TaskList {
         System.out.println("");
 
     }
-    public void updateTasks() {
-        printList();
-
-        System.out.println("Choose which taskList to update:");
-        int item = scanner.nextInt();
-
-        //option 1
-        System.out.println("choose what to update: 1--> Title, 2--> Project, 3--> Date");
-        int selection = scanner.nextInt();
-
-        switch (selection) {
-
-            case 1:
 
 
-            //option 2:
-            // ask user to enter the new title, and the new project and the new date
-
-
-            System.out.println("Enter new title:");
-            String title = scanner.next();
-            //  This is for edit title
-            taskList.get(item).setTitle(title);
-            System.out.println("Title has been edited");
-            break;
-
-            case 2:
-
-                System.out.println("Enter new project name:");
-                String projectName = scanner.next();
-                //  This is for edit title
-                taskList.get(item).setProjectName(projectName);
-                System.out.println("Project name has been edited");
-                break;
-
-            case 3:
-
-                LocalDate dueDate = Validator.validateDate();
-                taskList.get(item).setDueDate(dueDate);
-                System.out.println("Date has been edited");
-
-                break;
-
-        }
-
+    public void updateProjectName(int index, String project)
+    {
+        taskList.get(index).setProjectName(project);
+        System.out.println("Project name has been edited");
     }
 
 
-
-    public void RemoveTask()
+    public void updateTitle(int index, String title)
     {
-        printList();
-        System.out.println("Choose which taskList to remove:");
-        int item = scanner.nextInt();
-        taskList.remove(item);
-        saveTask();
+        taskList.get(index).setTitle(title);
+        System.out.println(("the title has been edited"));
+    }
+
+    public void updateDuedate(int index, LocalDate dueDate)
+    {
+        taskList.get(index).setDueDate(dueDate);
+        System.out.println("the due date has been edited");
+    }
+
+
+    public void removeTask(int index){
+        taskList.remove(index);
+        //saveTask();
         System.out.println("The taskList has been removed ");
 
 
     }
 
-    public void UpdateStatus () {
-        int index = 0;
-        Iterator<Task> it = taskList.iterator();
-        while (it.hasNext()) {
-            System.out.println("(" + index++ + ") " + it.next());
-        }
-        System.out.println("Choose which taskList status yoy need to update:");
-        int item = scanner.nextInt();
-        //  This is for edit title
-        System.out.println("Enter updated status:");
-        String Status = scanner.next();
-        //  This is for edit title
-        taskList.get(item).setStatus(Status);
+
+    //TODO
+    public void setStatus(int id,String status ){
+        printList();
+        System.out.println("Choose the index of the task to update");
+        taskList.get(id).setStatus(status);
+        saveTask();
+    }
+
+
+
+    public void updateStatus (int index, String status)
+    {
+        taskList.get(index).setStatus(status);
         System.out.println("Status has been updated");
 
     }
+
+
+
     public void saveTask() {
+        System.out.println("<<< New changes has been saved to the system >>>");
         try {
             FileOutputStream fos = new FileOutputStream( "TaskData" );
             ObjectOutputStream oos = new ObjectOutputStream( fos );
@@ -125,6 +92,7 @@ public class TaskList {
     }
 
 
+    //TODO   no scanenr
     public void readTask() {
         try {
             FileInputStream fis = new FileInputStream( "TaskData" );
@@ -138,25 +106,32 @@ public class TaskList {
     }
 
 
-    public void sortByProject(){
-        List<Task> sorted = taskList.stream().sorted(Comparator.comparing(task->task.getProjectName())).collect(Collectors.toList());
-        for(Task t:sorted){
-            System.out.println(t);
+    public ArrayList<Task> filterByProject(String projectName)
+    {
+        ArrayList<Task> filtered = (ArrayList<Task>) taskList.stream()
+                .filter(task -> task.getProjectName().equals(projectName)).collect(Collectors.toList());
 
+        if (filtered.size() == 0)
+        {
+            return null;
         }
+        else
+            return filtered;
+
     }
 
-    public void displayByDate(){
-        List<Task> sorted = taskList.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
-        for(Task t:sorted){
-            System.out.println(t);
-        }
+    //TODO no scanner
+    public  ArrayList<Task> displayByDate()
+    {
+        ArrayList<Task> displayDate = (ArrayList<Task>) taskList.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
 
+
+        return displayDate;
         //displayList(sorted);
     }
 
 
-    private void printList()
+    public void printList()
     {
         for (int i=0; i < taskList.size(); i++)
         {
@@ -165,30 +140,26 @@ public class TaskList {
     }
 
 
-    public void exit() {
-       System.out.println("Good Bye!!");
-       System.exit(0);
+    //TODO no scanner
+    public int[] showStatus()
+    {
+        int done=0;
+        int undone=0;
 
-
-    }
-
-    public void showStatus(){
-        int done=0,undone=0;
-        for(Task task:taskList){
-            if(task.getStatus().equals("done")){
+        for(Task task:taskList)
+        {
+            if(task.getStatus().toLowerCase().equals("done")){
                 done++;
             }
-            else if (task.getStatus().equals("undone")){
+            else //if (task.getStatus().equals("undone")){
                 undone++;
 
-            }
-
         }
-        System.out.println("You have " + done + " tasks done and " + undone + " tasks to do" );
+
+        return new int[]{done, undone};
+        //System.out.println("You have " + done + " tasks done and " + undone + " tasks to do" );
     }
 
 
+    //these methods are just for testing
 }
-
-
-

@@ -1,8 +1,21 @@
 package todo;
 
+/**
+  * ToDo List App
+  *
+  * @author shana
+  * @version 2019-03-15
+
+
+ */
 import java.io.Serializable;
 import java.time.LocalDate;
 
+
+  /**
+   *  Task class
+
+   */
 //public class Task implements Comparable<Task>, Serializable {
     public class Task implements  Serializable {
     private static final long serialVersionUID = 1L;
@@ -13,6 +26,8 @@ import java.time.LocalDate;
     private LocalDate dueDate;
     private String status;
 
+
+    public Task(){}
 
     public Task(String title, String projectName, LocalDate dueDate, String status) {
         this.id = id;
