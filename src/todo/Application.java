@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+
 
         MainTask selection = new MainTask();
         Scanner input = new Scanner(System.in);

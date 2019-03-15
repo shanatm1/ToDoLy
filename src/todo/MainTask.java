@@ -4,14 +4,19 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+/**
+ * This class is for the main task,
+ * Its shows the output to the user according to the selection
+ */
 public class MainTask {
 
 
-    //List<Task> taskList = new ArrayList<>();
+
     TaskList taskList = new TaskList();
     private Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
-    //TODO use stream to count the task that is done or undone
+
     public void addTask() {
 
         System.out.println();
@@ -28,7 +33,13 @@ public class MainTask {
 
         taskList.addTask(title, projectName, dueDate, status);
 
-
+        /**
+         * Update task based on 3 condition
+         * @param update title
+         * @param update project
+         * @param update date
+         *
+         */
     }
     public void updateTasks() {
         taskList.printList();
@@ -69,7 +80,10 @@ public class MainTask {
 
     }
 
-
+    /**
+     * This will remove the task corresponding to the select item
+     * @param. item of the task to be removed
+     */
 
     public void RemoveTask()
     {
@@ -78,9 +92,11 @@ public class MainTask {
         int item = scanner.nextInt();
         taskList.removeTask(item);
 
-
     }
 
+    /**
+     * The selected status has to be updated
+     */
     public void UpdateStatus ()
     {
         taskList.printList();
@@ -94,7 +110,9 @@ public class MainTask {
 
     }
 
-
+    /**
+     * This will filter the project by selecting item
+     */
 
     public void filterByProject()
     {
@@ -116,7 +134,11 @@ public class MainTask {
         }
     }
 
-    //TODO no scanner
+    /**
+     * This will display the project sort by date
+     *
+     */
+
     public void displayByDate()
     {
         ArrayList<Task> sortByDate = taskList.displayByDate();
@@ -143,7 +165,7 @@ public class MainTask {
         taskList.saveTask();
     }
 
-    //TODO no scanner
+
     public void showStatus()
     {
         int[] status = taskList.showStatus();

@@ -4,10 +4,18 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
+/**
+ * validator class prompt for standard input and validate input data
+ */
+
 public class Validator {
     private static Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
-    //validate date
+    /**
+     * prompt for date input
+     * validate if input is valid
+     * @return the valid date
+     */
     public static LocalDate validateDate() {
         LocalDate localDate = null;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -28,6 +36,12 @@ public class Validator {
 
     }
 
+
+    /**
+     * validate if the input is valid within a range
+     * @param maxRange range
+     * @return an integer within a specified range
+     */
 
     //validate number with min and max value
 

@@ -17,7 +17,7 @@ public class TaskList
         readTask();
     }
 
-    //TODO use stream to count the task that is done or undone
+
     public void addTask(String title, String projectName, LocalDate dueDate, String status)
     {
 
@@ -29,27 +29,44 @@ public class TaskList
 
     }
 
-
+    /**
+     * This will update the project
+     * @param index the position of the task to update its project
+     * @param project has been edited
+     */
     public void updateProjectName(int index, String project)
     {
+
         taskList.get(index).setProjectName(project);
         System.out.println("Project name has been edited");
     }
 
-
+    /**
+     * this will update the title
+     * @param index will select which title has to update
+     * @param title has to be updated
+     */
     public void updateTitle(int index, String title)
     {
         taskList.get(index).setTitle(title);
         System.out.println(("the title has been edited"));
     }
 
+    /**
+     * This will update the due date
+     * @param index will select which date has to update
+     * @param dueDate has been edited
+     */
     public void updateDuedate(int index, LocalDate dueDate)
     {
         taskList.get(index).setDueDate(dueDate);
         System.out.println("the due date has been edited");
     }
 
-
+    /**
+     * This will remove the task
+     * @param index will select which task has to be removed
+     */
     public void removeTask(int index){
         taskList.remove(index);
         //saveTask();
@@ -59,7 +76,6 @@ public class TaskList
     }
 
 
-    //TODO
     public void setStatus(int id,String status ){
         printList();
         System.out.println("Choose the index of the task to update");
@@ -68,7 +84,11 @@ public class TaskList
     }
 
 
-
+    /**
+     * This will update the status of the task
+     * @param index will select which task status has to be updated
+     * @param status  will update the status of the selected task
+     */
     public void updateStatus (int index, String status)
     {
         taskList.get(index).setStatus(status);
@@ -76,7 +96,9 @@ public class TaskList
 
     }
 
-
+    /**
+     * This will save the task
+     */
 
     public void saveTask() {
         System.out.println("<<< New changes has been saved to the system >>>");
@@ -91,8 +113,6 @@ public class TaskList
         }
     }
 
-
-    //TODO   no scanenr
     public void readTask() {
         try {
             FileInputStream fis = new FileInputStream( "TaskData" );
@@ -105,6 +125,11 @@ public class TaskList
         }
     }
 
+    /**
+     * This will display the project by filtering
+     * @param projectName can be filter to display
+     * @return the filtered project
+     */
 
     public ArrayList<Task> filterByProject(String projectName)
     {
@@ -120,7 +145,11 @@ public class TaskList
 
     }
 
-    //TODO no scanner
+
+    /**
+     * this mehtod display the task by date
+     * @return an array list of tasks order by date
+     */
     public  ArrayList<Task> displayByDate()
     {
         ArrayList<Task> displayDate = (ArrayList<Task>) taskList.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
@@ -139,8 +168,11 @@ public class TaskList
         }
     }
 
-
-    //TODO no scanner
+    /**
+     * This will show the status of the task
+     * @return show done if it completed
+     * @return  show undone if it is not completed
+     */
     public int[] showStatus()
     {
         int done=0;
@@ -157,9 +189,8 @@ public class TaskList
         }
 
         return new int[]{done, undone};
-        //System.out.println("You have " + done + " tasks done and " + undone + " tasks to do" );
+
     }
 
 
-    //these methods are just for testing
 }
