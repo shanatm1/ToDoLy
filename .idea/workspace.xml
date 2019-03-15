@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b00a17ac-ca53-4987-b56b-c43a77854a6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskData" beforeDir="false" afterPath="$PROJECT_DIR$/TaskData" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoLy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoLy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/todo/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToDoLy/todo/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/todo/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToDoLy/todo/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToDoLy/todo/TaskList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToDoLy/todo/TaskList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/TaskList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/MainTask.java" afterDir="false" />
-    </list>
+    <list default="true" id="b00a17ac-ca53-4987-b56b-c43a77854a6c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +201,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552655097274" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552655150393" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -374,9 +364,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TaskTest_getAndSetTitle - 2019.03.15 at 09h 37m 00s.xml">
-      <configuration name="TaskTest.getAndSetTitle" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TaskTest_getAndSetTitle - 2019.03.15 at 09h 38m 17s.xml">
       <configuration name="TaskTest.getAndSetTitle" configurationId="JUnit" />
     </history-entry>
@@ -404,16 +391,20 @@
     <history-entry file="TaskTest_getIdTest - 2019.03.15 at 14h 01m 13s.xml">
       <configuration name="TaskTest.getIdTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TaskTest_getIdTest - 2019.03.15 at 14h 05m 01s.xml">
+      <configuration name="TaskTest.getIdTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="23" width="1440" height="829" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.14377682" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.14377682" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -430,7 +421,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.056509297" />
+      <window_info active="true" anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.056509297" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
